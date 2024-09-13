@@ -1,0 +1,36 @@
+.mode-selection {
+    position: absolute;
+    left: 0;
+    bottom: 15%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.align-baseline {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 3px;
+}
+
+.align-baseline > * {
+    margin: 0;
+}
+
+.invert {
+    filter: invert(1);
+    mix-blend-mode: difference;
+}
+
+.title {
+    font-family: "Offside", sans-serif;
+    font-size: 7vw;
+}
+
+.colon {
+    font-size: 4vw;
+}

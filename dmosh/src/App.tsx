@@ -1,10 +1,10 @@
-import { useRef } from 'react'
-import VideoStream from './VideoStream.jsx'
-import ModeSelection from './ModeSelection.tsx'
+// import { useRef } from 'react'
+import VideoStream from './components/VideoStream/VideoStream.jsx'
+import ModeSelection from './components/MoshSettings/MoshSettings.tsx'
 import './App.css'
 
 function App() {
-  const playerRef = useRef(null);
+  // const playerRef = useRef(null);
 
   // TODO: review options
   const videoJsOptions = {
@@ -26,7 +26,7 @@ function App() {
   };
 
   const handlePlayerReady = (player: any) => {
-    playerRef.current = player;
+    // playerRef.current = player;
 
     player.ready(function() {
       var promise = player.play();

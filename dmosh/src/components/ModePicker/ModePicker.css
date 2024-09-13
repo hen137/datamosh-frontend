@@ -1,0 +1,65 @@
+.invert {
+    filter: invert(1);
+    mix-blend-mode: difference;
+}
+
+.font-mode {
+    font-size: 4vw;
+}
+
+/* .mode-selected {
+    font-family: "Kelly Slab", sans-serif;
+    margin: 0;
+}
+
+
+.mode-picker::-webkit-scrollbar {
+    display: none;
+}
+
+.mode-list {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    height: 4.7vw;
+    overflow: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+}
+
+.picker-item {
+    margin: 0;
+    scroll-snap-align: end;
+} */
+
+.mode-picker {
+    width: fit-content;
+    position: relative;
+}
+
+.selection {
+    position: absolute;
+    height: 4.7vw;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    pointer-events: none;
+
+    background-color: black;
+    opacity: 0.5;
+}
+
+.mode-list {
+    height: 15vw;
+    overflow: scroll;
+    scrollbar-width: none;
+
+    * {
+        font-size: 4vw;
+        margin: 0;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
