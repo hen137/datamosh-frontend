@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useClickAway } from "react-use";
+// import { useClickAway } from "react-use";
 import './ModePicker.css'
 
 function Modes() {
@@ -16,6 +16,9 @@ function Modes() {
         {
             mode: 'pinkie',
         },
+        {
+            mode: 'beeep',
+        },
     ];
 
     const [showPicker, setShowPicker] = useState(false);
@@ -23,7 +26,7 @@ function Modes() {
 
     const ref = useRef(null);
 
-    useClickAway(ref, () => setShowPicker(false));
+    // useClickAway(ref, () => setShowPicker(false));
 
     useEffect( () => {
 
@@ -44,7 +47,7 @@ function Modes() {
             <div ref={ref} className='mode-list'>
                 {modes.map((mode, index) => {
                         return (
-                            <p key={index}>
+                            <p key={index} className={`list-item ${!(selectedMode.mode == mode.mode)? 'hide' : ''}`}>
                                 {mode.mode}
                             </p>
                         )

@@ -33,8 +33,18 @@
 } */
 
 .mode-picker {
+    height: 15vw;
     width: fit-content;
     position: relative;
+}
+
+.selection:hover ~ .mode-list > .hide {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.hide {
+    opacity: 0;
 }
 
 .selection {
@@ -43,7 +53,7 @@
     width: 100%;
     top: 50%;
     transform: translate(0, -50%);
-    pointer-events: none;
+    /* pointer-events: none; */
 
     background-color: black;
     opacity: 0.5;
@@ -53,13 +63,16 @@
     height: 15vw;
     overflow: scroll;
     scrollbar-width: none;
-
-    * {
-        font-size: 4vw;
-        margin: 0;
-    }
+    scroll-snap-type: y mandatory;
 
     ::-webkit-scrollbar {
         display: none;
     }
 }
+
+.mode-list > p {
+    font-size: 4vw;
+    margin: 0;
+    scroll-snap-align: center;
+}
+
